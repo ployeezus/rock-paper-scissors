@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game #1</title>
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+
+    <h2>Pick One</h2>
+    <button id="rock_button">Rock</button>
+    <button id="paper_button">Paper</button>
+    <button id="scissors_button">Scissors</button>
+
+    <script>
+        const rock_button = document.getElementById("rock_button");
+        const paper_button = document.getElementById("paper_button");
+        const scissors_button = document.getElementById("scissors_button");
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        rock_button.onclick = function () {
+            var num = (getRandomInt(3));
+            switch (num) {
+                case 0:
+                    alert('Computer picked rock. Tie!');
+                    break;
+                case 1:
+                    alert('Computer picked paper. You lose!');
+                    break;
+                case 2:
+                    alert('Computer picked scissors. You win!');
+                    break;
+            }
+        };
+
+        paper_button.onclick = function () {
+            var num = (getRandomInt(3));
+            switch (num) {
+                case 0:
+                    alert('Computer picked rock. You win!');
+                    break;
+                case 1:
+                    alert('Computer picked paper. Tie!');
+                    break;
+                case 2:
+                    alert('Computer picked scissors. You lose!');
+                    break;
+            }
+        };
+
+        scissors_button.onclick = function () {
+            var num = (getRandomInt(3));
+            switch (num) {
+                case 0:
+                    alert('Computer picked rock. You lose!');
+                    break;
+                case 1:
+                    alert('Computer picked paper. You win!');
+                    break;
+                case 2:
+                    alert('Computer picked scissors. Tie!');
+                    break;
+            }
+        };
+    </script>
+
+</body>
+
+</html>
